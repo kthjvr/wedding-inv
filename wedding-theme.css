@@ -1,0 +1,203 @@
+/* Load AFTER styles2.css.
+   Palette: Champagne #F2E4D0, Antique Gold #C6A15B, Burgundy #6E1734, Wine #8F2948, Espresso #2A1018.
+   Champagne is the page base; burgundy/wine are accent blocks; espresso is for text and footer. */
+:root{
+  --color-primary:#6E1734; --color-secondary:#8F2948; --color-tertiary:#F2E4D0;
+  --color-quaternary:#C6A15B; --color-quinary:#6E1734; --color-accent:#C6A15B;
+  --color-black:#2A1018; --color-white:#2A1018;   /* --color-white = main text colour */
+  --text-secondary:#5a3342; --text-muted:#7a5a66;
+  --font-header:'Great Vibes',cursive; --font-body:'Cormorant Garamond',serif;
+}
+body{background:#F2E4D0;color:#2A1018;font-size:1.15rem;line-height:1.7}
+body::before{background:radial-gradient(circle at 15% 35%,rgba(143,41,72,.10),transparent 55%),radial-gradient(circle at 85% 85%,rgba(198,161,91,.22),transparent 50%)}
+body::after{background-image:radial-gradient(5px 5px at 40% 20%,#C6A15B,transparent),radial-gradient(3px 3px at 50% 60%,#8F2948,transparent),radial-gradient(4px 4px at 70% 80%,#C6A15B,transparent)}
+@keyframes title-glow{from{text-shadow:0 0 8px rgba(198,161,91,.3)}to{text-shadow:0 0 18px rgba(198,161,91,.65)}}
+.subtitle,.date-info,.landmark-details,.tap-hint{font-weight:500}
+
+/* Headings in burgundy */
+.animated-title,.event-section-header h2,.section-header h2,.guest-list-title{color:#6E1734;text-shadow:none}
+.animated-title{animation:title-glow 2s ease-in-out infinite alternate}
+
+/* Intro + envelope */
+.flap-left{background:linear-gradient(to right,#6E1734,#8F2948)}
+.flap-right{background:linear-gradient(to left,#6E1734,#8F2948)}
+.seal{display:flex;align-items:center;justify-content:center;gap:.1em;background:radial-gradient(circle at 35% 30%,#8F2948,#6E1734);border:3px solid #C6A15B;color:#F2E4D0;font:2.6rem/1 var(--font-header)}
+.seal span{font-size:1.6rem;color:#C6A15B}
+.loading-screen{background:#2A1018}
+.lid.one{border-top-color:#8F2948}
+.lid.two{border-top-color:#C6A15B}
+.envelope{border-right-color:#6E1734;border-bottom-color:#6E1734;border-left-color:#5a1229}
+.letter{background:linear-gradient(135deg,#F2E4D0,#e9d4b2);border:1px solid #C6A15B;box-shadow:0 0 24px rgba(198,161,91,.4);--color-white:#6E1734}
+.pulse-icon{width:clamp(48px,10vw,96px);stroke:#6E1734;fill:none;filter:drop-shadow(0 4px 8px rgba(198,161,91,.5))}
+
+/* Burgundy accent blocks (champagne text inside) */
+.story-card,.rsvp-card{background:linear-gradient(135deg,#6E1734,#8F2948);border:1px solid #C6A15B;box-shadow:0 20px 50px rgba(42,16,24,.35);--color-white:#F2E4D0}
+.story-title,.rsvp-title{color:#F2E4D0;text-shadow:none}
+.story-dot.active{background:#C6A15B}
+.thank-you-message{background:#6E1734;border:1px solid #C6A15B;--color-white:#F2E4D0}
+
+/* Buttons */
+.next-button,.back-button,.form-btn{background:#C6A15B;color:#2A1018;box-shadow:0 6px 18px rgba(42,16,24,.3)}
+.check-guest-btn,.add-calendar-btn{background:#6E1734;color:#F2E4D0;box-shadow:0 6px 18px rgba(42,16,24,.25)}
+.next-button:hover,.back-button:hover,.check-guest-btn:hover,.form-btn:hover,.add-calendar-btn:hover{box-shadow:0 8px 22px rgba(198,161,91,.5)}
+
+/* Gallery */
+.gallery-overlay{background:radial-gradient(ellipse 120% 130% at 50% 50%,rgba(242,228,208,0) 0%,rgba(242,228,208,.6) 45%,rgba(242,228,208,.95) 80%,#F2E4D0 100%)}
+.gallery-title{padding:0 1rem 2rem;margin-top:-9rem;text-align:center;color:#6E1734}
+.gallery-title .child-name,.gallery-title .age-number{font-size:clamp(3.5rem,14vw,6rem);margin:0;text-align:center;font-weight:400;display:block;color:#6E1734}
+.gallery-title .turning-text{font-family:var(--font-header);font-size:2.5rem;margin:0;text-align:center;color:#C6A15B}
+.gallery-title .sub{display:block;font-size:1.2rem;letter-spacing:2px;margin-top:.5rem;color:#2A1018}
+.carousel-container{box-shadow:0 0 50px rgba(198,161,91,.45),0 0 120px rgba(143,41,72,.25)}
+
+/* Event details */
+#event-details{background:rgba(198,161,91,.16)}
+.map-section{background:transparent}
+.calendar-widget{background:#fffaf2;border:1px solid #C6A15B}
+.fc .fc-toolbar-title{color:#6E1734}
+.fc-theme-standard th{background:#6E1734;color:#F2E4D0}
+.fc-event{background:rgba(198,161,91,.55)!important;border:2px solid #C6A15B!important}
+.map-container::after{border-color:#C6A15B}
+
+/* Dress code */
+.dresscode-notes{background:rgba(255,250,242,.7);border:1px solid #C6A15B;box-shadow:0 8px 24px rgba(42,16,24,.12)}
+.dresscode-notes:hover{box-shadow:0 12px 28px rgba(198,161,91,.35)}
+.dresscode-notes::before,.rsvp-card::after{content:'❦';color:#C6A15B}
+.color-circle{border-color:#fffaf2}
+
+/* RSVP + guests */
+.form-fallback{border-top-color:rgba(198,161,91,.6)}
+.form-loading{color:#8F2948}
+.loading-spinner{border-color:rgba(143,41,72,.2);border-top-color:#8F2948}
+.guest-card{background:#fffaf2;border:1px solid #C6A15B;box-shadow:0 10px 26px rgba(42,16,24,.12)}
+.guest-card-title{color:#6E1734}
+.guest-card-icon svg{color:#8F2948}
+.guest-list li::before{content:'❦';color:#C6A15B}
+
+/* Footer */
+footer{background:#2A1018;--color-white:#F2E4D0}
+.footer-contact{border-color:rgba(198,161,91,.4)}
+.divider-icon:nth-child(1){background:rgba(198,161,91,.2)}
+#trademark{background:#1c0a10}
+
+/* Music button */
+.music-btn{background:#6E1734;border:2px solid #C6A15B;box-shadow:0 8px 20px rgba(42,16,24,.4)}
+.music-btn:hover{background:#8F2948}
+.music-btn.playing{background:#C6A15B}
+
+/* ===== Storybook: album page instead of app card ===== */
+.story-card{background:none;border:none;box-shadow:none;padding:0;border-radius:0;--color-white:#2A1018;overflow:visible}
+.story-card::before,.story-card::after{content:none}
+.story-content{gap:1.6rem;align-items:center;transition:opacity .3s ease}
+.story-card.turning .story-content{opacity:0}
+.story-title{color:#6E1734;font-size:clamp(2.4rem,9vw,3.4rem);letter-spacing:0;font-weight:400}
+
+/* Arched photo frame with a thin gold outline */
+.story-image-container{width:min(78vw,300px);max-width:none;aspect-ratio:3/4;margin:.8rem auto;border-radius:999px 999px 0 0;overflow:hidden;animation:none;box-shadow:0 0 0 8px #F2E4D0,0 0 0 9px #C6A15B}
+.story-image-container::before,.story-image-container::after{content:none}
+.story-image-container img.story-image{border-radius:0;height:100%}
+.story-image:hover{transform:none}
+.sparkle-overlay{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:screen;opacity:.85;pointer-events:none}
+
+/* Text with a small gold rule above it */
+.story-text{font-size:1.25rem;font-style:italic;color:#2A1018;max-width:30ch;margin:0 auto;padding:0}
+.story-text::before{content:"";display:block;width:48px;height:1px;background:#C6A15B;margin:0 auto 1.2rem}
+
+/* Text-only navigation */
+.story-controls{padding:0 .5rem}
+.next-button,.back-button{background:none;box-shadow:none;border-radius:0;color:#6E1734;padding:.3rem 0;font-style:italic;font-size:1.15rem;border-bottom:1px solid #C6A15B}
+.next-button:hover,.back-button:hover{transform:none;box-shadow:none;color:#8F2948}
+.next-button::after,.back-button::after{display:none}
+
+/* Diamond progress markers */
+.story-indicator{gap:.9rem}
+.story-dot{width:7px;height:7px;border-radius:0;transform:rotate(45deg);background:#C6A15B;opacity:.35;box-shadow:none}
+.story-dot.active{background:#C6A15B;opacity:1;transform:rotate(45deg) scale(1.3);box-shadow:none}
+
+/* Icon-only story navigation (text hidden, arrows stay) */
+.story-card{touch-action:pan-y}
+.next-button,.back-button{font-size:0;gap:0;width:46px;height:46px;padding:0;justify-content:center;align-items:center;border:1px solid #C6A15B;border-radius:50%}
+.next-button svg,.back-button svg{width:22px;height:22px}
+.next-button:hover,.back-button:hover{background:rgba(198,161,91,.15)}
+
+/* Spread the arrows to the edges of the photo frame */
+.story-navigation{width:min(78vw,300px);margin-top:.5rem}
+.story-controls{width:100%;justify-content:space-between}
+
+/* ===== Gallery names: fade photo into champagne, tight natural lockup ===== */
+.gallery-overlay{background:linear-gradient(to bottom,rgba(242,228,208,0) 45%,rgba(242,228,208,.85) 78%,#F2E4D0 96%)}
+.gallery-title{display:flex;flex-direction:column;align-items:center;gap:0;margin-top:-3.5rem;padding:0 1rem 1rem;line-height:1}
+.gallery-title .child-name,.gallery-title .age-number{font-size:clamp(3.6rem,16vw,5.4rem);line-height:1.1;margin:0;color:#6E1734;text-shadow:0 0 14px rgba(242,228,208,.9)}
+.gallery-title .turning-text{font-size:1.9rem;line-height:1;margin:-.2rem 0 -.1rem;color:#B08A45}
+.gallery-title .sub{margin-top:.9rem;font-size:1.1rem;letter-spacing:2px;color:#2A1018}
+
+/* Seamless cover: fade the photo itself to transparent (top and bottom)
+   instead of painting a colour over it, so no edge shows against the page. */
+.gallery-overlay{display:none}
+.gallery-cover{
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 58%,transparent 100%);
+          mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 58%,transparent 100%);
+}
+
+/* ===== Save the Date: open calendar, no app-style card ===== */
+.event-section-header h2,.section-header h2{font-size:clamp(2.4rem,9vw,3.2rem);font-weight:400;letter-spacing:0}
+.date-info{font-size:1.35rem}
+.calendar-widget{background:none;border:none;box-shadow:none;padding:0;border-radius:0}
+.fc .fc-toolbar{justify-content:center}
+.fc .fc-toolbar-title{font-family:var(--font-header);font-size:2.2rem;font-weight:400;color:#6E1734}
+.fc-theme-standard th{background:none;border:none;border-bottom:1px solid #C6A15B}
+.fc .fc-col-header-cell-cushion{color:#8F2948;font-weight:500}
+.fc .fc-daygrid-day-frame{height:52px}
+.fc .fc-daygrid-day-number{font-size:1.1rem}
+.fc-day-other .fc-daygrid-day-number{opacity:0}
+/* Wedding day: solid burgundy circle with a thin gold ring */
+.fc-event{background:#6E1734!important;border:1px solid #C6A15B!important;box-shadow:0 0 0 3px #F2E4D0,0 0 0 4px #C6A15B}
+.fc .fc-daygrid-day:has(.fc-event) .fc-daygrid-day-number{color:#F2E4D0}
+/* Quiet outlined button */
+.add-calendar-btn{width:fit-content;margin:1.5rem auto 0;padding:.7rem 2rem;background:none;color:#6E1734;border:1px solid #6E1734;border-radius:0;box-shadow:none;font-style:italic;font-size:1.1rem}
+.add-calendar-btn:hover{background:#6E1734;color:#F2E4D0;transform:none;box-shadow:none}
+
+/* ===== Attire: plain text, labelled swatches, illustrations blended into the page ===== */
+.dresscode-notes{background:none;border:none;box-shadow:none;border-radius:0;padding:0 0 1.5rem}
+.dresscode-notes:hover{transform:none;box-shadow:none}
+.dresscode-notes::before{content:none}
+.dresscode-notes p{font-size:1.25rem;padding:.3rem 0}
+.dresscode-notes p:first-child{font-weight:500}
+.dresscode-notes p:last-child{font-style:italic}
+.dresscode-notes::after{left:35%;right:35%;height:1px;background:#C6A15B;opacity:.9}
+
+.color-theme{margin-bottom:4rem}
+.color-circles{gap:1.4rem}
+.color-circle{width:44px;height:44px;margin-left:0;border:1px solid #C6A15B;box-shadow:none;animation:none}
+.color-circle:hover{transform:none;box-shadow:none}
+.color-circle::after{content:attr(data-name);position:absolute;top:calc(100% + .6rem);left:50%;transform:translateX(-50%);font-size:.9rem;font-style:italic;white-space:nowrap;color:#2A1018}
+
+/* White illustration backgrounds disappear into the champagne page */
+.outfit-gallery{gap:1rem}
+.outfit-card{flex:1;max-width:200px;background:none;border:none;padding:0;border-radius:0;box-shadow:none;cursor:default}
+.outfit-card:hover{transform:none;box-shadow:none}
+.outfit-card::before{display:none}
+.outfit-image{background:none;border-radius:0;margin:0}
+.outfit-image img{mix-blend-mode:multiply}
+.outfit-card:hover .outfit-image img{transform:none}
+
+/* Footer social links */
+.footer-social{display:flex;justify-content:center;gap:1rem;margin-top:1.8rem}
+.footer-social a{width:42px;height:42px;display:flex;align-items:center;justify-content:center;border:1px solid #C6A15B;border-radius:50%;color:#F2E4D0;transition:background .3s,color .3s}
+.footer-social a svg{width:20px;height:20px}
+.footer-social a:hover,.footer-social a:focus-visible{background:#C6A15B;color:#2A1018}
+
+/* No colour names under the swatches */
+.color-circle::after{content:none}
+.color-theme{margin-bottom:2.5rem}
+
+/* Let the illustrations multiply into the page (remove isolating transforms/z-index) */
+.dress-code-container{z-index:auto}
+#dress-code.visible{animation:none}
+.dress-code-content,.dress-code-content.visible{transform:none}
+
+/* Tap an outfit image to enlarge */
+.outfit-card{cursor:zoom-in}
+.lightbox{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:1rem;background:rgba(42,16,24,.92);cursor:zoom-out}
+.lightbox[hidden]{display:none}
+.lightbox img{max-width:94vw;max-height:88vh;object-fit:contain;background:#fff}
+.lightbox-close{position:absolute;top:.8rem;right:1rem;width:44px;height:44px;border:1px solid #C6A15B;border-radius:50%;background:none;color:#F2E4D0;font-size:1.8rem;line-height:1;cursor:pointer}

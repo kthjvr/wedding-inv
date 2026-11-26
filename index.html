@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<title>Angela &amp; Jeff's Wedding Invitation</title>
+<meta property="og:title" content="You're Invited to Angela &amp; Jeff's Wedding">
+<meta property="og:description" content="💌 Open the link to reveal the wedding details">
+<meta property="og:image" content="/assets/preview.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles2.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.css" rel="stylesheet">
+<link rel="stylesheet" href="wedding-theme.css">
+</head>
+<body>
+<div class="intro-screen" id="introScreen">
+  <div class="envelope-wrapper">
+    <div class="flap-left"></div>
+    <div class="center-image seal">A<span>&amp;</span>J</div>
+    <div class="flap-right"></div>
+  </div>
+</div>
+<div class="loading-screen" id="loadingScreen"><img src="/assets/loading.gif" alt="Loading..." class="loading-gif"></div>
+
+<div id="mainContent" class="visible">
+  <section id="banner-section">
+    <div class="header-section">
+      <h1 class="animated-title"><span data-event="coupleNames"></span> are getting married</h1>
+      <p class="subtitle">Tap the envelope to open your invitation</p>
+      <div class="pulse-indicator">
+        <svg class="pulse-icon" viewBox="0 0 48 32" stroke-width="1.5"><circle cx="18" cy="16" r="11"/><circle cx="30" cy="16" r="11"/></svg>
+      </div>
+    </div>
+    <div class="envelope-container">
+      <div class="wrapper" id="envelope">
+        <div class="lid one" id="lid1"></div>
+        <div class="lid two" id="lid"></div>
+        <div class="envelope"></div>
+        <div class="letter" id="letter"><div class="letter-content"><p data-event="invitationMessage"></p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story-section">
+    <div class="storybook-container"><div class="story-card" id="storyCard"><div class="story-content">
+      <h2 class="story-title" id="storyTitle">Our Love Story</h2>
+      <div class="story-image-container"><img src="/assets/story/cover.jpg" alt="Angela and Jeff" class="story-image" id="storyImage" loading="lazy"><img src="/assets/sparkle.gif" alt="" aria-hidden="true" class="sparkle-overlay" onerror="this.remove()"></div>
+      <p class="story-text" id="storyText">Every love story is beautiful, but ours is our favorite. Turn the page to read it.</p>
+      <div class="story-navigation"><div class="story-controls">
+        <button class="back-button" id="backButton" aria-label="Previous"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6l6 6"/></svg></button>
+        <button class="next-button" id="nextButton" aria-label="Next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6l-6 6"/></svg></button>
+      </div></div>
+      <div class="story-indicator" id="storyIndicator"></div>
+    </div></div></div>
+  </section>
+
+  <section class="gallery-section" id="gallery-section">
+    <div class="gallery-container">
+      <div class="gallery-cover"><img data-event-gallery-cover alt="Angela and Jeff"><div class="gallery-overlay"></div></div>
+      <div class="gallery-title">
+        <span class="child-name" data-event="brideName"></span>
+        <span class="turning-text">and</span>
+        <span class="age-number" data-event="groomName"></span>
+        <span class="sub">are tying the knot</span>
+      </div>
+    </div>
+    <p class="animated-details-polariod">Scroll on for the wedding details</p>
+  </section>
+
+  <section class="polaroid-section" id="polaroid-section">
+    <div class="carousel-container" id="carousel"><div class="tap-hint">Tap to see the next photo</div></div>
+  </section>
+
+  <section id="event-details">
+    <div class="event-details-container">
+      <div class="calendar-section">
+        <div class="event-section-header"><div data-icon="calendar"></div><h2>Save the Date</h2></div>
+        <div class="date-details"><div class="date-info"><p><span data-event="eventDateFull"></span><br><span data-event="eventTime"></span></p></div></div>
+        <div class="calendar-widget" id="calendar"></div>
+        <button class="add-calendar-btn" id="addToCalendar">Add to Google Calendar</button>
+      </div>
+      <div class="map-section">
+        <div class="event-section-header"><div data-icon="map"></div><h2>The Venue</h2></div>
+        <div class="date-details"><div class="date-info"><p><span data-event="venueFull"></span><br><span data-event="venueAddress"></span></p></div></div>
+        <div class="map-container"><iframe data-event-map width="100%" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Venue map"></iframe></div>
+        <div class="landmark-details"><p>Nearby landmarks: <span data-event="nearbyLandmarks"></span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dress-code">
+    <div class="dress-code-container">
+      <div class="section-header"><div data-icon="dressCode"></div><h2>Attire</h2></div>
+      <div class="dresscode-notes" role="note"><p data-event="dressCodeParagraph1"></p><p data-event="dressCodeParagraph2"></p></div>
+      <div class="color-theme"><div class="color-circles">
+        <div class="color-circle" style="background:#6E1734"></div>
+        <div class="color-circle" style="background:#8F2948"></div>
+        <div class="color-circle" style="background:#C6A15B"></div>
+        <div class="color-circle" style="background:#F2E4D0"></div>
+      </div></div>
+      <div class="dress-code-content"><div class="girls-section"><div class="outfit-gallery">
+        <div class="outfit-card"><div class="outfit-image"><img data-outfit="women" alt="Attire idea for women" loading="lazy"></div></div>
+        <div class="outfit-card"><div class="outfit-image"><img data-outfit="men" alt="Attire idea for men" loading="lazy"></div></div>
+      </div></div></div>
+    </div>
+  </section>
+
+  <section id="rsvp-section">
+    <div class="rsvp-container"><div class="rsvp-card" id="rsvpCard"><div class="rsvp-content">
+      <div class="rsvp-icon" data-icon="rsvp"></div>
+      <h2 class="rsvp-title" data-event="rsvpTitle"></h2>
+      <p class="rsvp-subtitle" data-event="rsvpSubtitle"></p>
+      <div class="google-form-container">
+        <div class="form-loading" id="formLoading"><div class="loading-spinner"></div>Loading RSVP form...</div>
+        <iframe class="form-iframe" id="rsvpForm" frameborder="0" style="display:none;" title="Wedding RSVP form">Loading...</iframe>
+      </div>
+      <div class="form-fallback">
+        <p class="fallback-text">Form not loading?</p>
+        <a target="_blank" rel="noopener noreferrer" class="form-btn">Open RSVP form</a>
+      </div>
+    </div></div></div>
+  </section>
+
+  <section id="guest-list-section">
+    <div class="guest-list-container">
+      <div class="guest-list-header" id="guestListHeader">
+        <div data-icon="guest"></div>
+        <h2 class="guest-list-title">Our Wedding Party</h2>
+        <p class="guest-list-subtitle">The people standing with us on our special day.</p>
+        <button class="check-guest-btn" id="checkGuestBtn">Wedding Party</button>
+      </div>
+      <div class="guest-list-content" id="guestListContent">
+        <div class="guest-cards-grid" id="guestCardsGrid"></div>
+        <div class="thank-you-message" id="thankYouMessage"><p data-event="guestListThankYou"></p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer id="footer-section">
+  <div class="footer-container">
+    <div class="footer-divider"><div class="divider-line"></div>
+      <div class="divider-icons"><div class="divider-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/></svg></div></div>
+    <div class="divider-line"></div></div>
+    <div class="footer-main-message">
+      <h3>With Love, <span data-event="coupleNames"></span></h3>
+      <p class="footer-submessage">Thank you for celebrating our marriage with us.</p>
+    </div>
+    <div class="footer-social">
+      <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
+      <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="https://tiktok.com/@yourhandle" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+    </div>
+    <div class="footer-contact"><p>Questions? Contact
+      <a href="tel:+630000000000" class="contact-link"><span data-event="contactName"></span> <span data-event="contactPhone"></span></a></p></div>
+  </div>
+</footer>
+
+<div class="music-controls" id="musicControls"><button type="button" class="music-btn" id="musicBtn"><span class="music-icon">🎵</span></button></div>
+<audio id="bgMusic" loop preload="auto" playsinline><source src="/bgm/song.mp3" type="audio/mpeg"></audio>
+
+<div class="lightbox" id="lightbox" hidden><button class="lightbox-close" aria-label="Close">&times;</button><img alt=""></div>
+<script>
+(function(){
+  var box=document.getElementById('lightbox'), big=box.querySelector('img');
+  document.querySelectorAll('.outfit-image img').forEach(function(img){
+    img.addEventListener('click',function(){big.src=img.src;big.alt=img.alt;box.hidden=false;});
+  });
+  box.addEventListener('click',function(){box.hidden=true;});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')box.hidden=true;});
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js" defer></script>
+<script type="module" src="script.js" defer></script>
+</body>
+</html>

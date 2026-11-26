@@ -1,0 +1,28 @@
+// TODO: replace every placeholder below with real details.
+export const EVENT_CONFIG = {
+  coupleNames: "Angela & Jeff",
+  brideName: "Angela",
+  groomName: "Jeff",
+  eventTitle: "The Wedding of Angela & Jeff",
+  eventDescription: "Join us as Angela and Jeff say \"I do.\"",
+  invitationMessage: "Together with their families, Angela and Jeff request the honour of your presence at their wedding.",
+  eventDateFull: "Sunday, March 7, 2027",
+  eventTime: "1:00 PM",
+  calendarStart: "2027-03-07T13:00:00+08:00",
+  calendarEnd: "2027-03-07T18:00:00+08:00",
+  venueFull: "Venue Name",
+  venueAddress: "Street, City",
+  venueAddressFull: "Street, City, Province",
+  nearbyLandmarks: "Add nearby landmarks",
+  mapEmbedUrl: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.4210071872417!2d121.13305277487268!3d13.933519786477607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd6dbd67da9909%3A0x2c3700f4696b445a!2sThe%20Old%20Grove%20Farmstead!5e0!3m2!1sen!2sph!4v1795668775568!5m2!1sen!2sph`,
+  googleFormUrl: "",
+  galleryCoverImage: "/assets/gallery/cover.jpg",
+  outfitImages: { women: "/assets/attire-women.jpg", men: "/assets/attire-men.jpg" },
+  dressCodeParagraph1: "Our wedding colors are burgundy, wine, antique gold, and champagne. We'd love to see you dressed in them.", 
+  dressCodeParagraph2: "Formal attire, please.",
+  rsvpTitle: "Kindly Reply",
+  rsvpSubtitle: "Please let us know by February 7, 2027 if you can celebrate with us.",
+  guestListThankYou: "Thank you for sharing this day with us. Your love means everything.",
+  contactName: "Angela & Jeff",
+  contactPhone: "+63 900 000 0000"
+};
